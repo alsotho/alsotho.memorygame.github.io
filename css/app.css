@@ -181,57 +181,84 @@ h1 {
     color: red;
 }
 
-/* Mobile Breakpoints for Tablet */
-@media screen and (max-width:800px) {
-  .container {
-    width: 100%;
-  }
-  .deck {
-    max-width: 600px;
-    min-height: 580px !important;
-  }
-  .deck .card {
-    height: 110px !important;
-    width: 110px !important;
-  }
+/* breakpoints */
+ul,
+menu,
+dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: inherit;
+}
+@media screen and (max-width: 720px){
+
+    h1 {
+      font-size: 65px;
+    }
+    .container {
+        margin: 0 20px;
+    }
+    .deck {
+        max-width: 660px;
+        width: 100%;
+        min-height: auto;
+        margin: 20px;
+        padding: 10px;
+    }
+    .deck .card {
+        width: calc(25% - 10px);
+        padding-top: 25%;
+        height: inherit;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .deck .card:nth-child(4),
+    .deck .card:nth-child(8),
+    .deck .card:nth-child(12),
+    .deck .card:nth-child(16) {
+        margin-right: 0;
+    }
+    li.card.open.show .fa {
+        position: fixed;
+        top: 50%;
+    }
+    li.card.open.match,
+    li.card.open.show {
+        position: relative;
+    }
+    li.card.open.match i,
+    li.card.open.show i {
+        position: fixed;
+        transform: translateY(-50%);
+        padding-top: 0px;
+        margin: 0px;
+        top: 50%;
+    }
+}
+@media screen and (max-width: 480px){
+    h1 {
+      font-size: 50px;
+    }
+    .score-panel {
+        text-align: center;
+        display: inline-block;
+    }
+    .timer {
+        margin: 0;
+    }
+    ul.stars, .moves, .timer, .restart {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+        float: left;
+    }
 }
 
-/* Mobile Breakpoints for Phone */
-@media screen and (max-width:600px) {
-  .container {
-    width: 100%;
-  }
-  .deck {
-    max-width: 410px;
-    min-height: 380px !important;
-  }
-  .deck .card {
-    height: 70px !important;
-    width: 70px !important;
-  }
-}
-
-/* Mobile Breakpoints for tiny Phone */
-@media screen and (max-width:400px) {
-  .container {
-    width: 100%;
-  }
-  .deck {
-    max-width: 270px;
-    min-height: 300px !important;
-    padding: 18px !important;
-  }
-  .deck .card {
-    height: 50px !important;
-    width: 50px !important;
-    font-size: 23px !important;
-  }
-  .score-panel {
-    width: 270px !important;
-  }
-}
-
-/* Styles forheader*/
+/* Styles for header*/
 @-webkit-keyframes rainbowText {
   0%{
     color: #000000; }
