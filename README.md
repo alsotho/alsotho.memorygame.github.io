@@ -38,7 +38,7 @@ Move Counter: Game displays the current number of moves a user has made.
 
 Built with the following code dependencies:
 
-<ul style="list-style-type:square">
+<ul>
   <li>Google Fonts</li>
   <li>Font Awesome</li>
  </ul>
